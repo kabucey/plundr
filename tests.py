@@ -12,7 +12,7 @@ class UserTestCase(unittest.TestCase):
     def test_redis_increment(self):
         self.redis.get = MagicMock(return_value=3)
         plunders = self.redis.get('plunders')
-        self.assertEqual(plunders, 3)
+        self.assertEqual(plunders, 2)
         pass
 
 if __name__ == '__main__':

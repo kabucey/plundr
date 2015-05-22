@@ -1,3 +1,4 @@
 #!/bin/sh
 env
-python tests.py
+python init.py
+python app.py

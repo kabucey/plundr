@@ -14,6 +14,11 @@ def home():
 def api_plunder():
     """Plunders the booty and returns a json status."""
     plunder()
+    return api_status()
+
+@app.route('/api/status')
+def api_status():
+    """Returns the current status of your plunders and booty."""
     dict = {
         "plunders": int(redis.get('plunders')),
         "booty": int(redis.get('booty'))
